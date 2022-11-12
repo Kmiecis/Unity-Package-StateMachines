@@ -35,4 +35,11 @@ namespace Common.StateMachines
         /// </summary>
         void Update();
     }
+
+    /// <summary>
+    /// Concrete Hierarchical State Machine interface
+    /// </summary>
+    public interface IHierarchicalStateMachine : IHierarchicalStateMachine<IHierarchicalState>
+    {
+    }
 }

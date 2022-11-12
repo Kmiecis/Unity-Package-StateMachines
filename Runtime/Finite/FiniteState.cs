@@ -5,16 +5,11 @@ namespace Common.StateMachines
     /// </summary>
     public class FiniteState : IFiniteState
     {
-        protected readonly IFiniteStateMachine<FiniteState> _machine;
+        protected readonly IFiniteStateMachine<FiniteState> _stateMachine;
 
-        private string _name;
-
-        public FiniteState(IFiniteStateMachine<FiniteState> machine, string name = null)
+        public FiniteState(IFiniteStateMachine<FiniteState> stateMachine)
         {
-            _machine = machine;
-            _name = name ?? GetType().Name;
-
-            machine.Add(this);
+            _stateMachine = stateMachine;
         }
 
         public virtual void StartState()
@@ -27,11 +22,6 @@ namespace Common.StateMachines
 
         public virtual void FinishState()
         {
-        }
-
-        public override string ToString()
-        {
-            return _name;
         }
     }
 }

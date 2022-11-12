@@ -29,4 +29,11 @@ namespace Common.StateMachines
         /// </summary>
         void Update();
     }
+
+    /// <summary>
+    /// Concrete Finite State Machine interface
+    /// </summary>
+    public interface IFiniteStateMachine : IFiniteStateMachine<IFiniteState>
+    {
+    }
 }

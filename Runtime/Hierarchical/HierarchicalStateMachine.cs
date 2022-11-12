@@ -52,4 +52,11 @@ namespace Common.StateMachines
             }
         }
     }
+
+    /// <summary>
+    /// Concrete <see cref="HierarchicalStateMachine{T}"/> of <see cref="IHierarchicalState"/> implementation
+    /// </summary>
+    public class HierarchicalStateMachine : HierarchicalStateMachine<IHierarchicalState>, IHierarchicalStateMachine
+    {
+    }
 }

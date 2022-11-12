@@ -11,22 +11,16 @@ namespace Common.StateMachines
     {
         protected readonly Dictionary<Type, T> _states = new Dictionary<Type, T>();
 
-        protected string _name;
         protected T _state;
 
-        public FiniteStateMachine(string name = null)
+        public FiniteStateMachine(T state)
         {
-            _name = name ?? GetType().Name;
+            _state = state;
         }
 
         public virtual void Add(T state)
         {
             _states.Add(state.GetType(), state);
-
-            if (_state == null)
-            {
-                _state = state;
-            }
         }
 
         public virtual void Switch(Type type)
@@ -47,10 +41,16 @@ namespace Common.StateMachines
         {
             _state.UpdateState();
         }
+    }
 
-        public override string ToString()
+    /// <summary>
+    /// Concrete <see cref="FiniteStateMachine{T}"/> of <see cref="IFiniteState"/> implementation
+    /// </summary>
+    public class FiniteStateMachine : FiniteStateMachine<IFiniteState>, IFiniteStateMachine
+    {
+        public FiniteStateMachine(IFiniteState state) :
+            base(state)
         {
-            return _name;
         }
     }
 }
