@@ -48,9 +48,5 @@ namespace Common.StateMachines
     /// </summary>
     public class FiniteStateMachine : FiniteStateMachine<IFiniteState>, IFiniteStateMachine
     {
-        public FiniteStateMachine(IFiniteState state) :
-            base(state)
-        {
-        }
     }
 }
