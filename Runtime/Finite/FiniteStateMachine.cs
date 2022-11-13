@@ -13,14 +13,14 @@ namespace Common.StateMachines
 
         protected T _state;
 
-        public FiniteStateMachine(T state)
-        {
-            _state = state;
-        }
-
         public virtual void Add(T state)
         {
             _states.Add(state.GetType(), state);
+
+            if (_state == null)
+            {
+                _state = state;
+            }    
         }
 
         public virtual void Switch(Type type)
