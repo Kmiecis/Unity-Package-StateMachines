@@ -2,7 +2,7 @@
   "name": "com.common.state.machines",
   "displayName": "Common State Machine",
   "author": {
-    "name": "Slawomir Kmiecik",
+    "name": "Kmiecis",
     "email": "slawekkmiecik@gmail.com"
   },
   "description": "Common hierarchical state machine implementation",
