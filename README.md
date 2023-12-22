@@ -1,13 +1,13 @@
-# Common Behaviour Trees
+# State Machines
 
 ## Description
 
-Both code-only and Animator, simple and lightweight state machines implementation.
+Both code-only and Animator, simple and lightweight state machines implementations.
 
 ## Installation
 
 Add the package via Package Manager by adding it from git URL:  
-`https://github.com/kmiecis/unity-package-statemachines.git`  
+`https://github.com/Kmiecis/Unity-Package-StateMachines.git`  
 Package Manager can be found inside the Unity Editor in the Window tab
 
 OR

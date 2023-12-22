@@ -1,14 +1,14 @@
 {
-  "name": "com.common.state.machines",
-  "displayName": "Common State Machine",
+  "name": "com.kmiecis.state.machines",
+  "displayName": "State Machines",
   "author": {
     "name": "Kmiecis",
     "email": "slawekkmiecik@gmail.com"
   },
-  "description": "Common hierarchical state machine implementation",
+  "description": "Simple and lightweight implementation of Finite State Machine, Hierarchical State Machine and Animator State Machine",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kmiecis/unity-package-statemachines"
+    "url": "https://github.com/Kmiecis/Unity-Package-StateMachines.git"
   }
 }
